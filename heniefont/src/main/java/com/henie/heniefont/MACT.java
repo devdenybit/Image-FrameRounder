@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MACT extends AppCompatActivity {
 
     Handler handlerr = new Handler(Looper.getMainLooper());
 

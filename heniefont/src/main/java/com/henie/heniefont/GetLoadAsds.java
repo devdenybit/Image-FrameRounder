@@ -327,9 +327,9 @@ public class GetLoadAsds {
         dialog.create();
 
         dialog.show();
-        Window window = dialog.getWindow();
-        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+      //  Window window = dialog.getWindow();
+       // window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+       // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
     }
 
@@ -380,9 +380,9 @@ public class GetLoadAsds {
         dialog.create();
 
         dialog.show();
-        Window window = dialog.getWindow();
-        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+      //  Window window = dialog.getWindow();
+      //  window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+       // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
     }
 
