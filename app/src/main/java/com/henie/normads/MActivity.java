@@ -1,4 +1,5 @@
-package com.henie.finalproject;
+package com.henie.normads;
+
 
 
 import androidx.appcompat.app.AppCompatActivity;

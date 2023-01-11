@@ -1,20 +1,13 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,9 +41,7 @@ public class MACT extends AppCompatActivity {
     }
 
     public static void getRetryBtn(Activity activity, Intent intent1, String url) {
-
-        GetLoadAsds.getInstance(activity).sendRequest(url, intent1, getCurrentVersionCode(activity));
-
+        MyAminMage.getInstance(activity).ADSinit(activity, intent1, url, getCurrentVersionCode(activity));
     }
 
     @Override

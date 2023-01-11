@@ -1,4 +1,4 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

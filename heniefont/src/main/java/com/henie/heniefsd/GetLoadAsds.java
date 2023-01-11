@@ -1,14 +1,14 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 
-import static com.henie.heniefont.MyAdZOne.app_BannerPeriority;
-import static com.henie.heniefont.MyAdZOne.app_NativeAdCodeType;
-import static com.henie.heniefont.MyAdZOne.app_UpdatePackageName;
-import static com.henie.heniefont.MyAdZOne.app_newPackageName;
-import static com.henie.heniefont.MyAdZOne.app_onesingle_appid;
-import static com.henie.heniefont.MyAdZOne.app_redirectOtherAppStatus;
-import static com.henie.heniefont.MyAdZOne.app_updateAppDialogStatus;
-import static com.henie.heniefont.MyAdZOne.app_versionCode;
+import static com.henie.heniefsd.MyAdZOne.app_BannerPeriority;
+import static com.henie.heniefsd.MyAdZOne.app_NativeAdCodeType;
+import static com.henie.heniefsd.MyAdZOne.app_UpdatePackageName;
+import static com.henie.heniefsd.MyAdZOne.app_newPackageName;
+import static com.henie.heniefsd.MyAdZOne.app_onesingle_appid;
+import static com.henie.heniefsd.MyAdZOne.app_redirectOtherAppStatus;
+import static com.henie.heniefsd.MyAdZOne.app_updateAppDialogStatus;
+import static com.henie.heniefsd.MyAdZOne.app_versionCode;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -16,14 +16,11 @@ import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Handler;
 import android.view.View;
-import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -132,7 +129,7 @@ public class GetLoadAsds {
             e.printStackTrace();
         }
         RequestQueue queue = Volley.newRequestQueue(activity);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, mode + model, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, mode+model, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -152,6 +149,7 @@ public class GetLoadAsds {
                         if (app_NativeAdCodeType.equalsIgnoreCase("new")) {
                             MyAdZOne.getInstance(activity).Load_NativeNewAds();
                         }
+
 
                         if (app_onesingle_appid != null) {
                             OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
@@ -327,9 +325,9 @@ public class GetLoadAsds {
         dialog.create();
 
         dialog.show();
-      //  Window window = dialog.getWindow();
-       // window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-       // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        //  Window window = dialog.getWindow();
+        // window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
     }
 
@@ -380,9 +378,9 @@ public class GetLoadAsds {
         dialog.create();
 
         dialog.show();
-      //  Window window = dialog.getWindow();
-      //  window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-       // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        //  Window window = dialog.getWindow();
+        //  window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        // window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
     }
 

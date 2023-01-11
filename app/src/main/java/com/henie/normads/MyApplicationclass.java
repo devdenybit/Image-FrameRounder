@@ -1,8 +1,8 @@
 
-package com.henie.finalproject;
+package com.henie.normads;
 
 import android.content.res.Resources;
-import com.henie.heniefont.Applicationclass;
+import com.henie.heniefsd.Applicationclass;
 
 
 public class MyApplicationclass extends Applicationclass {

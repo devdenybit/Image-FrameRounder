@@ -1,8 +1,8 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
-import static  com.henie.heniefont.MyAdZOne.AD_MOB_APP_ID_OpenAd1;
-import static  com.henie.heniefont.MyAdZOne.AD_MOB_OpenAd_STATUS;
+import static  com.henie.heniefsd.MyAdZOne.AD_MOB_APP_ID_OpenAd1;
+import static  com.henie.heniefsd.MyAdZOne.AD_MOB_OpenAd_STATUS;
 
 import android.app.Activity;
 import android.app.Application;
@@ -87,15 +87,15 @@ public class AppOpenManager implements Application.ActivityLifecycleCallbacks, L
         AdRequest request = getAdRequest();
 
         if (adsLoadnow) {
-            if (Objects.equals(AD_MOB_OpenAd_STATUS, "true")) {
-                if (!Objects.equals(AD_MOB_APP_ID_OpenAd1, "")) {
-                    AppOpenAd.load(myApplication, String.valueOf(AD_MOB_APP_ID_OpenAd1), request,
+                if (Objects.equals(AD_MOB_OpenAd_STATUS, "true")) {
+                    if (!Objects.equals(AD_MOB_APP_ID_OpenAd1, "")) {
+                        AppOpenAd.load(myApplication, String.valueOf(AD_MOB_APP_ID_OpenAd1), request,
+                                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
+                    }
+                } else {
+                    AppOpenAd.load(myApplication, "1234885", request,
                             AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
                 }
-            } else {
-                AppOpenAd.load(myApplication, "1234885", request,
-                        AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
-            }
 
         }
     }

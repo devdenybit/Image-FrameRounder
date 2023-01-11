@@ -1,5 +1,5 @@
 
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 import android.app.Activity;
 import android.app.Application;

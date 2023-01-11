@@ -1,6 +1,6 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
-import static com.henie.heniefont.BuildConfig.DEBUG;
+import static com.henie.heniefsd.BuildConfig.DEBUG;
 
 import android.content.Context;
 import android.util.Log;

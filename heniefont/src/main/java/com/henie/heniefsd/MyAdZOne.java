@@ -1,4 +1,4 @@
-package com.henie.heniefont;
+package com.henie.heniefsd;
 
 
 import android.app.Activity;
@@ -9,9 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -54,7 +52,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MyAdZOne {
@@ -362,100 +359,8 @@ public class MyAdZOne {
         app_CustomeADBannerLink = jsonObject.getString("app_CustomeADBannerLink");
 
 
-
-
     }
 
-    // rediret another app
-
-   /* public static void showRedirectDialog(Activity context, final String url) {
-
-        final Dialog dialog = new Dialog(context);
-        dialog.setCancelable(false);
-        View view = context.getLayoutInflater().inflate(R.layout.redirect_newapp_dialog, null);
-        dialog.setContentView(view);
-        TextView update = view.findViewById(R.id.update);
-        TextView txt_title = view.findViewById(R.id.txt_titles);
-        TextView txt_decription = view.findViewById(R.id.txt_decription);
-
-        update.setText("Install Now");
-        txt_title.setText("Install our new app now and enjoy");
-        txt_decription.setText("We have transferred our server, so install our new app by clicking the button below to enjoy the new features of app.");
-
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Uri marketUri = Uri.parse(url);
-                    Intent marketIntent = new Intent(Intent.ACTION_VIEW, marketUri);
-                    context.startActivity(marketIntent);
-                } catch (ActivityNotFoundException ignored1) {
-                }
-            }
-        });
-
-        dialog.create();
-
-        dialog.show();
-        Window window = dialog.getWindow();
-        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
-    }*/
-
-    // update app dailog
-
-  /*  public static boolean checkUpdate(int cversion) {
-        if (app_updateAppDialogStatus == 1) {
-            String str[] = app_versionCode.split(",");
-
-            try {
-                if (Arrays.asList(str).contains(cversion + "")) {
-                    return true;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return false;
-    }
-
-    public static void showUpdateDialog(Activity context, String updatePackageName) {
-
-        final Dialog dialog = new Dialog(context);
-        dialog.setCancelable(false);
-        View view = context.getLayoutInflater().inflate(R.layout.redirect_newapp_dialog, null);
-        dialog.setContentView(view);
-        TextView update = view.findViewById(R.id.update);
-        TextView txt_title = view.findViewById(R.id.txt_titles);
-        TextView txt_decription = view.findViewById(R.id.txt_decription);
-
-        update.setText("Update Now");
-        txt_title.setText("Update our new app now and enjoy");
-        txt_decription.setText("");
-        txt_decription.setVisibility(View.GONE);
-
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    Uri marketUri = Uri.parse("https://play.google.com/store/apps/details?id=" + updatePackageName);
-                    Intent marketIntent = new Intent(Intent.ACTION_VIEW, marketUri);
-                    context.startActivity(marketIntent);
-                } catch (ActivityNotFoundException ignored1) {
-                }
-            }
-        });
-
-        dialog.create();
-
-        dialog.show();
-        Window window = dialog.getWindow();
-        window.setLayout(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
-    }
-*/
 
     /// banner code ------------------------------------------------------------------------
 
@@ -463,6 +368,8 @@ public class MyAdZOne {
         if (app_AllAdShowStatus == 0) {
             return;
         }
+
+
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && AD_MOB_STATUS.equalsIgnoreCase("false")) {
             showFacebookBanner();
         } else if (AD_MOB_STATUS.equalsIgnoreCase("true") && FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
@@ -473,8 +380,9 @@ public class MyAdZOne {
             } else {
                 showFacebookBanner();
             }
-
         }
+
+
     }
 
     public void showBanner(RelativeLayout banner_container) {
@@ -881,6 +789,8 @@ public class MyAdZOne {
         if (app_AllAdShowStatus == 0) {
             return;
         }
+
+
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && AD_MOB_STATUS.equalsIgnoreCase("false")) {
             showNativeFacebookBanner();
         } else if (AD_MOB_STATUS.equalsIgnoreCase("true") && FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
@@ -891,8 +801,9 @@ public class MyAdZOne {
             } else {
                 showNativeFacebookBanner();
             }
-
         }
+
+
     }
 
     public void showNativeBanner(RelativeLayout banner_container) {
@@ -1372,10 +1283,10 @@ public class MyAdZOne {
     /// new native code ------------------------------------------------------------------------
 
     public void Load_NativeNewAds() {
-        Log.e(TAG, "Load_NativeNewAds: ");
         if (app_AllAdShowStatus == 0) {
             return;
         }
+
         if (FACEBOOK_AD_STATUS.equalsIgnoreCase("true") && AD_MOB_STATUS.equalsIgnoreCase("false")) {
             showFacebookNativeNew();
         } else if (AD_MOB_STATUS.equalsIgnoreCase("true") && FACEBOOK_AD_STATUS.equalsIgnoreCase("false")) {
@@ -1386,8 +1297,9 @@ public class MyAdZOne {
             } else {
                 showFacebookNativeNew();
             }
-
         }
+
+
     }
 
     public void showNativeNew(ViewGroup banner_container) {
